@@ -1,4 +1,5 @@
-# Our project partly use ShiftAddNet and GhostNet: 
+# Our project: GhostShiftAddNet: More Features from Energy-Efficient Operations
+It partly uses two projects including ShiftAddNet and GhostNet: 
 ***ShiftAddNet: A Hardware-Inspired Deep Network*** published on the NeurIPS 2020 and  ***GhostNet: More Features from Cheap Operations*** published on the CVPR 2020.
 
 ---
