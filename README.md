@@ -1,20 +1,16 @@
-# ShiftAddNet
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
-
-This is a PyTorch implementation of ***ShiftAddNet: A Hardware-Inspired Deep Network*** published on the NeurIPS 2020
-
+# Our project partly use ShiftAddNet and GhostNet: 
+***ShiftAddNet: A Hardware-Inspired Deep Network*** published on the NeurIPS 2020 and  ***GhostNet: More Features from Cheap Operations*** published on the CVPR 2020.
 
 ---
 
 ## Prerequisite
 
 * GCC >= 5.4.0
-* PyTorch == 1.4
+* PyTorch >= 1.4
 * Other common library are included in `requirements.txt`
 
 
-### Compile Adder Cuda Kernal
+### We use compiler of Adder Cuda Kernal from ShiftAddNet 
 
 The original [AdderNet Repo](https://github.com/huawei-noah/AdderNet) considers using PyTorch for implementing add absed convolution, however it remains slow and requires much more runtime memory costs as compared to the variant with CUDA acceleration.
 
@@ -83,68 +79,11 @@ We release the pretrained checkpoints in [Google Drive](https://drive.google.com
     bash ./scripts/deepshift/cifar100.sh
 ````
 
-* Examples for training of ShiftAddNet
+* Examples for training of GhostShiftAddNet
 
 ````
-# CIFAR-10
-    bash ./scripts/shiftaddnet/cifar10/FP32.sh
-    bash ./scripts/shiftaddnet/cifar10/FIX8.sh
+# CIFAR-10/CIFAR-100/ImageNet
+    bash ./scripts/shiftaddnet/cifar10/ghostFP32.sh
+    bash ./scripts/shiftaddnet/cifar10/ghostFIX8.sh
 
-# CIFAR-100
-    bash ./scripts/shiftaddnet/cifar100/FP32.sh
-    bash ./scripts/shiftaddnet/cifar100/FIX8.sh
-````
-
-* Examples for training of ShiftAddNet (Fixed shift variant)
-
-````
-# CIFAR-10
-    bash ./scripts/shiftaddnet_fix/cifar10/FP32.sh
-    bash ./scripts/shiftaddnet_fix/cifar10/FIX8.sh
-
-# CIFAR-100
-    bash ./scripts/shiftaddnet_fix/cifar100/FP32.sh
-    bash ./scripts/shiftaddnet_fix/cifar100/FIX8.sh
-````
-
-## ShiftAddNet on IoT
-
-Please refer to `./IoT` directory for detailed description.
-
-
-## T-SNE Visualization
-
-Reproduce the T-SNE visualization of the class divergences in AdderNet, and the proposed ShiftAddNet, using ResNet-20 on CIFAR-10 as an example.
-
-````
-bash ./scripts/gen_feat.sh # generate the features that will be used for visualization
-
-cd tsne_vis &&
-python visual_tsne.py --save_dir resnet20_add_FP32 --scratch
-python visual_tsne.py --save_dir resnet20_add_FIX8 --scratch
-python visual_tsne.py --save_dir resnet20_shiftadd_FP32 --scratch
-python visual_tsne.py --save_dir resnet20_shiftadd_FIX8 --scratch
-
-python visual_tsne.py --save_dir resnet20_add_FP32 --scratch --dim_3d
-python visual_tsne.py --save_dir resnet20_add_FIX8 --scratch --dim_3d
-python visual_tsne.py --save_dir resnet20_shiftadd_FP32 --scratch --dim_3d
-python visual_tsne.py --save_dir resnet20_shiftadd_FIX8 --scratch --dim_3d
-````
-
-The output figure should look like below:
-<br><br>
-![](./tsne_vis/comp.png)
-
-
-## Citation
-
-If you find this codebase is useful for your research, please cite:
-
-````
-@inproceedings{ShiftAddNet,
-title={ShiftAddNet: A Hardware-Inspired Deep Network},
-author={Haoran You, Xiaohan Chen, Yongan Zhang, Chaojian Li, Sicheng Li, Zihao Liu, Zhangyang Wang, Yingyan Lin},
-booktitle={Thirty-fourth Conference on Neural Information Processing Systems},
-year={2020},
-}
 ````
