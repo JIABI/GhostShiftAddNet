@@ -1,4 +1,3 @@
-![Screenshot 2021-08-22 at 12-13-26 British_Machine_Vision_Conference pdf](https://user-images.githubusercontent.com/9842386/130353017-6ec2ce27-d16b-448a-b8ab-eb51418d2bec.png)
 # GhostShiftAddNet: More Features from Energy-Efficient Operations
 It partly uses two projects including ShiftAddNet and GhostNet: 
 ***ShiftAddNet: A Hardware-Inspired Deep Network*** published on the NeurIPS 2020 and  ***GhostNet: More Features from Cheap Operations*** published on the CVPR 2020.
@@ -89,3 +88,6 @@ We release the pretrained checkpoints in [Google Drive](https://drive.google.com
     bash ./scripts/shiftaddnet/cifar10/ghostFIX8.sh
 
 ````
+## Main results of GhostShiftAddNet on GPU/CPU and Jetson Nano
+![Screenshot 2021-08-22 at 12-13-26 British_Machine_Vision_Conference pdf](https://user-images.githubusercontent.com/9842386/130353017-6ec2ce27-d16b-448a-b8ab-eb51418d2bec.png)
+![Screenshot 2021-08-22 at 12-16-01 British_Machine_Vision_Conference pdf](https://user-images.githubusercontent.com/9842386/130353063-bdd35d4f-a8ee-4822-8587-57cae0495ebb.png)
