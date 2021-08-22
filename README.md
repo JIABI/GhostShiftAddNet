@@ -1,3 +1,4 @@
+![Screenshot 2021-08-22 at 12-13-26 British_Machine_Vision_Conference pdf](https://user-images.githubusercontent.com/9842386/130353017-6ec2ce27-d16b-448a-b8ab-eb51418d2bec.png)
 # GhostShiftAddNet: More Features from Energy-Efficient Operations
 It partly uses two projects including ShiftAddNet and GhostNet: 
 ***ShiftAddNet: A Hardware-Inspired Deep Network*** published on the NeurIPS 2020 and  ***GhostNet: More Features from Cheap Operations*** published on the CVPR 2020.
